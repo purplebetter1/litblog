@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Blog Roll</h1>
+
+    {% if blog_list %}
+    <ul>
+
+      {% for blog in blog_list %}
+      <li>
+        <a href="">{{ blog.name }}</a> published --- 
+        <a href="">({{blog.author}})</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no blogs listed.</p>
+    {% endif %}       
+{% endblock %}
